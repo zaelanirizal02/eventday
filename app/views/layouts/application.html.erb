@@ -8,7 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style media="screen">
-      .icon-soc{
+      .icon-soc {
         width: 50px;
         margin: 10px;
       }
@@ -16,7 +16,6 @@
   </head>
 
   <body>
-
 
     <nav class="navbar navbar-default">
 
@@ -31,6 +30,7 @@
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li><%= link_to "Log In", new_user_session_path %></li>
+            <li><%= link_to "Profile Saya", profile_path%></li>
           <% end %>
 
         </ul>
@@ -61,46 +61,46 @@
 
     </nav>
 
-
-
-
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
 
     <div class="container">
 
       <%= yield %>
     </div>
 
-   <!--FOTERRRRRRR-->
-   <footer style="background-color: #343a40 !important;padding:0px 0px;">
-     <div class="footer-socmed" style="margin:90px 0px">
-       <center>
-         <div class="icons">
-           <%= image_tag("facebook.png", :class => "icon-soc") %>
-           <%= image_tag("twitter.png", :class => "icon-soc") %>
-           <%= image_tag("yt.png", :class => "icon-soc") %>
-           <%= image_tag("ig.png", :class => "icon-soc") %>
-         </div>
-         <div class="footer-nav">
-           <strong style="color:white">HOME <span style="margin-left:12px">MENU <span style="margin-left:12px">STORY <span style="margin-left:12px">DETOX <span style="margin-left:12px">LOCATIONS </strong>
-             <br>
-             <p style="color:white">CONTACT | BLOCK | CATERING | DELIVERY</p>
-         </div>
-       </center>
-     </div>
-     <div class="footer-text" style="background-color: #28a745 !important;padding:20px 0px;">
-       <center>
-         <strong style="color:white">EVENTDAY</strong>
-           <br>
-           <p style="color:white">&copy Granada Project 2018 | All rights reserved.</p>
-       </center>
-     </div>
+    <!--FOTERRRRRRR-->
+    <footer style="background-color: #343a40 !important;padding:0px 0px;">
+      <div class="footer-socmed" style="margin:90px 0px">
+        <center>
+          <div class="icons">
+            <%= image_tag("facebook.png", :class => "icon-soc") %>
+            <%= image_tag("twitter.png", :class => "icon-soc") %>
+            <%= image_tag("yt.png", :class => "icon-soc") %>
+            <%= image_tag("ig.png", :class => "icon-soc") %>
+          </div>
+          <div class="footer-nav">
+            <strong style="color:white">HOME
+              <span style="margin-left:12px">MENU
+                <span style="margin-left:12px">STORY
+                  <span style="margin-left:12px">LOCATIONS
+                  </strong>
+                  <br>
+                  <p style="color:white">
+                    EVENTDAY
+                  </p>
+                </div>
+              </center>
+            </div>
+            <div class="footer-text" style="background-color: #28a745 !important;padding:20px 0px;">
+              <center>
+                <strong style="color:white">EVENTDAY</strong>
+                <br>
+                <p style="color:white">&copy Granada Project 2018 | All rights reserved.</p>
+              </center>
+            </div>
 
-   </footer>
+          </footer>
 
-
-
-  </body>
-</html>
+        </body>
+      </html>

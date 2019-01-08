@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_27_021323) do
+ActiveRecord::Schema.define(version: 2018_12_28_144231) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 2018_12_27_021323) do
     t.string "event_img_content_type"
     t.bigint "event_img_file_size"
     t.datetime "event_img_updated_at"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "nama"
+    t.text "deskripsi"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
